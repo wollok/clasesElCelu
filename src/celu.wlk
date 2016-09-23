@@ -59,7 +59,7 @@ class RedSocial{
 	}
 		
 	method agregarConv(conv){
-		conversaciones += conv
+		conversaciones = conversaciones + conv
 	}
 }
 
