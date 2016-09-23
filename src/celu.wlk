@@ -85,8 +85,8 @@ object s3mini{
 	method consumirBateria(app){
 		bateria -= app.gastaBateria()
 		if(bateria<=0) 
-			error.throwWithMessage("sin bateria")
-			//throw new Exception("sin bateria")
+			//error.throwWithMessage("sin bateria")
+			throw new Exception("sin bateria")
 	}
 	method bateria(){
 		return bateria
