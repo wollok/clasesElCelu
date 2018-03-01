@@ -1,5 +1,7 @@
-# Se me cuelga el celu 
-##Ejercicio introductorio a clases
+# Se me cuelga el celu
+
+## Ejercicio introductorio a clases
+
 **Tests, Objetos, clases, colecciones**
 
 En el celular s3Mini pueden estar abiertas muchas aplicaciones a la vez. Obvio que tiene un límite de memoria RAM de 1000 MB. Cuando una app se abre, queda corriendo en el teléfono, ocupando RAM, y gastando batería.
