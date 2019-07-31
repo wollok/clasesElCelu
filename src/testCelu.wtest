@@ -1,34 +1,34 @@
 import fixtureCelu.*
+
 test "900 MB libres, en celu con watsapp y repo Musica " {
-	var celu = fixture.crearCeluWatsappRepMusica()
-	assert.equals(900,celu.ramLibre())
+	var celu = fixtureCelu.crearCeluWatsappRepMusica()
+	assert.equals(900, celu.ramLibre())
 }
 
-test "En 1 minuto queda bateria 96, en Celu con watsapp y repro Musica" {
-	var celu = fixture.crearCeluWatsappRepMusica()
+test "En 1 minuto queda bateria 93, en Celu con watsapp y repro Musica" {
+	var celu = fixtureCelu.crearCeluWatsappRepMusica()
 	celu.pasarMinutos(1)
-	assert.equals(96,celu.bateria())
+	assert.equals(93, celu.bateria())
 }
 
 test "En 1 minuto queda bateria 98, en Celu con youTube y calculadora " {
-	var celu = fixture.crearCeluYouTubeCalculudora()
+	var celu = fixtureCelu.crearCeluYouTubeCalculudora()
 	celu.pasarMinutos(1)
-	assert.equals(98,celu.bateria())
+	assert.equals(98, celu.bateria())
 }
 
 test "890 Ram libre en celu con telegram y youtube " {
-	var celu = fixture.crearCeluTelegramYouTube()
-	assert.equals(890,celu.ramLibre())
+	var celu = fixtureCelu.crearCeluTelegramYouTube()
+	assert.equals(890, celu.ramLibre())
 }
 
-
 test "En 10 minuto la bateria no se gasta, si tengo redes sociaels sin conversaciones" {
-	var celu = fixture.crearCeluRedesSocialesIniciales()
+	var celu = fixtureCelu.crearCeluRedesSocialesIniciales()
 	celu.pasarMinutos(10)
-	assert.equals(100,celu.bateria())
+	assert.equals(100, celu.bateria())
 }
 
 test "En 50 minutos la bateria se gasta, y lanza excepcion, en celu con watsapp y repro Musica" {
-	var celu = fixture.crearCeluWatsappRepMusica()
-	assert.throwsException({celu.pasarMinutos(50)})
+	var celu = fixtureCelu.crearCeluWatsappRepMusica()
+	assert.throwsException({ celu.pasarMinutos(50)})
 }
