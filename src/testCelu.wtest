@@ -5,10 +5,10 @@ test "900 MB libres, en celu con watsapp y repo Musica " {
 	assert.equals(900, celu.ramLibre())
 }
 
-test "En 1 minuto queda bateria 93, en Celu con watsapp y repro Musica" {
+test "En 1 minuto queda bateria 96, en Celu con watsapp y repro Musica" {
 	var celu = fixtureCelu.crearCeluWatsappRepMusica()
 	celu.pasarMinutos(1)
-	assert.equals(93, celu.bateria())
+	assert.equals(96, celu.bateria())
 }
 
 test "En 1 minuto queda bateria 98, en Celu con youTube y calculadora " {

@@ -9,11 +9,11 @@ object fixtureCelu {
 	}
 
 	method crearWatsappCon2Conv() {
-		return new RedSocial(base = 40, valorUnitario = 2, conversaciones = 5)
+		return new RedSocial(base = 40, valorUnitario = 5, conversaciones = 2)
 	}
 
 	method crearTelegramCon5Conv() {
-		return new RedSocial(base = 30, valorUnitario = 5, conversaciones = 4)
+		return new RedSocial(base = 30, valorUnitario = 4, conversaciones = 5)
 	}
 
 	method crearRepMusica30Temas() {

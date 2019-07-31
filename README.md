@@ -2,6 +2,7 @@
  
 [![Build Status](https://travis-ci.org/wollok/clasesElCelu.svg?branch=master)](https://travis-ci.org/wollok/clasesElCelu)
 
+Actualizado a Wollok 1.8
 
 ## Ejercicio introductorio a clases
 
