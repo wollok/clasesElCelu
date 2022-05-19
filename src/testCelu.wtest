@@ -1,34 +1,63 @@
-import fixtureCelu.*
+import celu.*
+describe "tests de celulares" {
+	const ws2conversaciones = new RedSocial(base = 40, valorUnitario = 5, conversaciones = 2)
+	const rep30temas = new Reproductor(cantidad = 30, tope = 50, valorUnitario = 2)
+	const tg5Conversaciones = new RedSocial(base = 30, valorUnitario = 4, conversaciones = 5)
+	const yt10Temas	= new Reproductor(cantidad = 10, tope = 100, valorUnitario = 6)
+
+	method agregarWatsappRepMusica() {
+		s3mini.agregarApp(ws2conversaciones)
+		s3mini.agregarApp(rep30temas)
+	}
+
+
+	method agregarYouTubeCalculudora() {
+		s3mini.agregarApp(yt10Temas)
+		s3mini.agregarApp(calculadora)
+	}
+
+	method agregarTelegramYouTube() {
+		s3mini.agregarApp(yt10Temas)
+		s3mini.agregarApp(tg5Conversaciones)
+	}
+
+	method agregarRedesSocialesIniciales() {
+		s3mini.agregarApp(new RedSocial(base = 40, valorUnitario = 5))
+		s3mini.agregarApp(new RedSocial(base = 30, valorUnitario = 100))
+		s3mini.agregarApp(new RedSocial(base = 1, valorUnitario = 1))
+	}
+	
 
 test "900 MB libres, en celu con watsapp y repo Musica " {
-	var celu = fixtureCelu.crearCeluWatsappRepMusica()
-	assert.equals(900, celu.ramLibre())
+	self.agregarWatsappRepMusica()
+	assert.equals(900, s3mini.ramLibre())
 }
 
 test "En 1 minuto queda bateria 96, en Celu con watsapp y repro Musica" {
-	var celu = fixtureCelu.crearCeluWatsappRepMusica()
-	celu.pasarMinutos(1)
-	assert.equals(96, celu.bateria())
+	self.agregarWatsappRepMusica()
+	s3mini.pasarMinutos(1)
+	assert.equals(96, s3mini.bateria())
 }
 
 test "En 1 minuto queda bateria 98, en Celu con youTube y calculadora " {
-	var celu = fixtureCelu.crearCeluYouTubeCalculudora()
-	celu.pasarMinutos(1)
-	assert.equals(98, celu.bateria())
+	self.agregarYouTubeCalculudora()
+	s3mini.pasarMinutos(1)
+	assert.equals(98, s3mini.bateria())
 }
 
 test "890 Ram libre en celu con telegram y youtube " {
-	var celu = fixtureCelu.crearCeluTelegramYouTube()
-	assert.equals(890, celu.ramLibre())
+	self.agregarTelegramYouTube()
+	assert.equals(890, s3mini.ramLibre())
 }
 
 test "En 10 minuto la bateria no se gasta, si tengo redes sociaels sin conversaciones" {
-	var celu = fixtureCelu.crearCeluRedesSocialesIniciales()
-	celu.pasarMinutos(10)
-	assert.equals(100, celu.bateria())
+	self.agregarRedesSocialesIniciales()
+	s3mini.pasarMinutos(10)
+	assert.equals(100, s3mini.bateria())
 }
 
 test "En 50 minutos la bateria se gasta, y lanza excepcion, en celu con watsapp y repro Musica" {
-	var celu = fixtureCelu.crearCeluWatsappRepMusica()
-	assert.throwsException({ celu.pasarMinutos(50)})
+	self.agregarWatsappRepMusica()
+	assert.throwsException({ s3mini.pasarMinutos(50)})
+}
 }
