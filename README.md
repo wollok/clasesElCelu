@@ -21,7 +21,7 @@ Conocer la memoria RAM libre del s3Mini.
 Simular que se usa el celular por un minuto, lo que produce que se gaste la batería (los porcentajes descritos arriba son por minuto).
 ¡No repetir lógica ni siquiera en los tests!
 
-###Parte A) 
+### Parte A) 
 
 Hacer la codificación necesaria y los siguientes tests:
 Sobre la memoria libre:
@@ -30,9 +30,9 @@ Sobre la memoria libre:
 
 Sobre el gasto de batería:
 - El s3Mini con Whatsapp (dos conversaciones) y el reproductor (30 canciones), al usarse un minuto queda con 96% de batería.
-- El s3Mini con sólo la calculadora abierta al usarse tres minutos queda con 100% de batería.
+- El s3Mini con sólo la calculadora abierta al usarse tres minutos queda con 100% de batería. 
 
-###Parte B) 
+### Parte B) 
 Ahora existe la aplicación YouTube, que ocupa 6Mb por cada video en la lista de reproducción, aunque está optimizado para ocupar 100Mb máximo, por más que la lista sea muy larga. Gasta 2% de batería por estar prendida.
 
 Hacer un test que pruebe que el s3Mini con Youtube (10 videos) y la calculadora, al usarse un minuto el celular, queda con 98% de batería.
@@ -41,7 +41,7 @@ Ahora existe la aplicación Telegram, que ocupa 30Mb base y 4Mb por cada convers
 
 Hacer un test que pruebe que el s3Mini con Telegram (5 conversaciones) y YouTube como en el punto anterior abiertos, tiene 890 MB libres.
 
-###Parte C) 
+### Parte C) 
 
 ¿Qué debería suceder si intento usar el celular con 0 batería? Escribir un test.
 
