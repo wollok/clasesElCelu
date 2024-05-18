@@ -1,6 +1,6 @@
 # Se me cuelga el celu
  
-[![Build Status](https://travis-ci.org/wollok/clasesElCelu.svg?branch=master)](https://travis-ci.org/wollok/clasesElCelu)
+[![Build Status](https://github.com/wollok/clasesElCelu/actions/workflows/ci.yml/badge.svg)](https://github.com/wollok/clasesElCelu/actions/workflows/ci.yml)
 
 Actualizado a Wollok 1.8
 
